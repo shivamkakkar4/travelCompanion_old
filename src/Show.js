@@ -152,9 +152,9 @@ class Show extends Component{
 
 
 
-        <div id="midCloseDiv">
+        {/* <div id="midCloseDiv">
           <button type="submit" class="btn btn-light" id="midCloseButton">X</button>
-        </div>
+        </div> */}
         <div id="content" class="section-dark">
           <h1 id='destinationTitle'></h1>
           <div id="first"></div>
