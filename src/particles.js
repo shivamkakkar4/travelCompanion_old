@@ -7,6 +7,10 @@
 /* v2.0.0
 /* ----------------------------------------------- */
 
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+// particlesJS.load('particles-js', 'assets/particles.json', function() {
+//   console.log('callback - particles.js config loaded');
+// });
 var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');

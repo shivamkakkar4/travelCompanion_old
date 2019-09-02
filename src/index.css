@@ -9,7 +9,6 @@
 }
 #aSignUp{
   cursor: pointer;
-  
 }
 body {
   background: linear-gradient(to right,#FAD588,#F4AE84);
@@ -695,6 +694,18 @@ body, html{
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+/* Partcles JS */
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+#particles-js{
+  height: 100%;
+  background: black;
 }
 
 
