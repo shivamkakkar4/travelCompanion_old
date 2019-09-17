@@ -33,7 +33,7 @@ class List extends Component
       document.getElementById('itemlist').innerHTML = `<img id="loading3" src="${require('./images/loading3.gif')}"/>`
 
 
-      axios.post("http://localhost:8080/http://localhost:5000/list")
+      axios.post("/list")
         .then((result)=>{
 
           localStorage.setItem('content',JSON.stringify(result));

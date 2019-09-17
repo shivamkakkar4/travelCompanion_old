@@ -73,7 +73,7 @@ if(localStorage.getItem('token') != undefined){
 
     var delUser = localStorage.getItem('userName');
 
-    axios.post("http://localhost:8080/http://localhost:5000/deleteAccount",{'delUser':delUser})
+    axios.post("/deleteAccount",{'delUser':delUser})
     .then((result)=>{
       if(result.data.status == 'deleted'){
         localStorage.removeItem('token');
@@ -163,7 +163,7 @@ if(localStorage.getItem('token') != undefined){
   //   }
   // }
   else if(e.target.id=="listOpen"){
-    axios.post('http://localhost:8080/http://localhost:5000/verifyToken',{'token':localStorage.getItem('token')})
+    axios.post('/verifyToken',{'token':localStorage.getItem('token')})
     .then((result)=>{
       if(window.outerWidth<450){
         if(result.data.status=='valid'){
@@ -207,7 +207,7 @@ if(localStorage.getItem('token') != undefined){
     var uname = document.getElementById("uname").value;
     var upass = document.getElementById("upass").value;
     
-    axios.post('http://localhost:8080/http://localhost:5000/login',({'userName':uname,'userPass':upass}))
+    axios.post('/login',({'userName':uname,'userPass':upass}))
     .then((result)=>{
       
 
@@ -258,7 +258,7 @@ if(localStorage.getItem('token') != undefined){
     
     else{
 
-      axios.post('http://localhost:8080/http://localhost:5000/signup',({'firstName':fname,'lastName':lname,
+      axios.post('/signup',({'firstName':fname,'lastName':lname,
       'userName':uname,'userPass':upass,'userConfirmPass':uCpass}))
       .then((result)=>{
         console.log(result)
