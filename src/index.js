@@ -33,7 +33,8 @@ if(localStorage.getItem('token') != undefined){
   if(e.target.id == "login"){
     document.getElementById('transparentBack').style.display="block";
     document.getElementById('form').style.height="62vh";
-    ReactDOM.render(<Login/>,document.getElementById('form'));
+    setTimeout(()=>{ReactDOM.render(<Login/>,document.getElementById('form'))},300);
+    
   }
   else if(e.target.id == "nSignUp"){
     ReactDOM.unmountComponentAtNode(document.getElementById("form"));
@@ -92,7 +93,7 @@ if(localStorage.getItem('token') != undefined){
         document.getElementById('middle').style.gridTemplateColumns = "100% 0%";
         document.getElementById("listcontainer").style.display = "none";
         document.getElementById('mySidenav').style.width = "250px";
-        document.getElementById('shopping').style.display = "none";
+        document.getElementById('shopping').style.width = "0";
         i--;
         m++;
       }
@@ -136,8 +137,8 @@ if(localStorage.getItem('token') != undefined){
     m--;
   }
   else if(e.target.id == "favCloseButton"){
-    document.getElementById('shopping').style.display = "none";
-    i--;
+    document.getElementById('shopping').style.width = "0";
+    // i--;
   }
   else if(e.target.id == "home"){
     document.getElementById("main").style.display = "block";
@@ -147,22 +148,26 @@ if(localStorage.getItem('token') != undefined){
   }
   else if(e.target.id=="logo")
   {
-  
-    if(i==0){
       document.getElementById('shopping').style.width = "20rem";
-      i++;
-    }
-    else if(i==1){
-      document.getElementById('shopping').style.width = "0";
-      i--;
-    }
   }
+  // else if(e.target.id=="logo")
+  // {
+  
+  //   if(i==0){
+  //     document.getElementById('shopping').style.width = "20rem";
+  //     i++;
+  //   }
+  //   else if(i==1){
+  //     document.getElementById('shopping').style.width = "0";
+  //     i--;
+  //   }
+  // }
   else if(e.target.id=="listOpen"){
     axios.post('http://localhost:8080/http://localhost:5000/verifyToken',{'token':localStorage.getItem('token')})
     .then((result)=>{
       if(window.outerWidth<450){
         if(result.data.status=='valid'){
-          document.getElementById('shopping').style.display = "block";
+          document.getElementById('shopping').style.width = "20rem";
           document.getElementById('mySidenav').style.width = "0";
           m--;
           i++;
@@ -176,8 +181,8 @@ if(localStorage.getItem('token') != undefined){
       }
       else{
         if(result.data.status=='valid'){
-          document.getElementById('shopping').style.display = "block";
-          i++;
+          document.getElementById('shopping').style.width = "20rem";
+          //i++;
         }
         else{
           alert("Login first");

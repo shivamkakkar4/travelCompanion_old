@@ -109,10 +109,10 @@ class Show extends Component{
                 </span>
               </div>
             </div>
-            <section class="section section-light">
+            <section class="section section-light justified">
               <h2>Why Travel Companion ?</h2>
               <p>
-                Travel Companion is a project started to help people find the best places to visit in the world. 
+                Travel Companion is an online travel guide which helps people to find the best places to visit in the world. Here we keep record of the most trending places to visit in the world right now. The places are ranked from top to bottom. For more information click on the links present in the website
               </p>
             </section>
 
@@ -124,10 +124,10 @@ class Show extends Component{
               </div>
             </div>
 
-            <section class="section section-dark">
-              <h2>Section Two</h2>
+            <section class="section section-dark2">
+              <h2>What else do we provide ?</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in.
+                Find top hotels in the best places to visit in the world. You can find hotels according to your budget and need. We also provide information about most popular destinations in the city that will help you explore the place in a convenient and hassle free way We also provide exciting discounts and deals on hotels and other places you want to visit in the city
               </p>
             </section>
 
@@ -160,12 +160,12 @@ class Show extends Component{
           <div id="first"></div>
 
 
-          <section id="second" class="section section-dark">
+          <section id="second" class="section2 section-dark">
               <p id="ing"></p>
               <div id="favButtonDiv">
                 <button class="btn btn-primary" id="favButton" onClick={this.fav}>Add to Favourites</button>
               </div>
-            </section>
+          </section>
         </div>
       </div>
     )

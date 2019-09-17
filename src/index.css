@@ -186,6 +186,9 @@ input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover{
   grid-template-columns: 20% 80%;
   cursor: pointer;
 }
+.justified{
+  text-align: justify;
+}
 label{
   text-align: center;
   width: 10rem;
@@ -585,13 +588,30 @@ body, html{
   text-align:center;
   padding:50px 80px;
 }
+.section2{
+  padding:50px 80px;
+}
+#hotel{
+  color: #111111;
+  text-decoration: none;
+}
+#hotel:hover{
+  color: #ddd;
+}
 
 .section-light{
+  font-size: 1.3rem;
   background-color:#f4f4f4;
   color:#666;
 }
 
 .section-dark{
+  background-color:#282e34;
+  color:#ddd;
+}
+
+.section-dark2{
+  font-size: 1.3rem;
   background-color:#282e34;
   color:#ddd;
 }
@@ -819,7 +839,7 @@ body{
     width: 2.5rem;
   }
   #logo{
-    display: block;
+    display: none;
     height: 2.5rem;
     width: 2.5rem;
   }
@@ -849,6 +869,14 @@ body{
   }
   .design{
     font-size: 50px;
+  }
+  .rightsidenav{
+    top: 10rem;
+    left: 0;
+  }
+  #userMenuBar{
+    top: 10rem;
+    left: 0;
   }
   .white-mode{
     left: 10.5rem;
@@ -886,6 +914,12 @@ body{
     padding: 0;
     display: block;
     margin-left: 2rem;
+  }
+  .section{
+    padding:50px 50px;
+  }
+  .section2{
+    padding:50px 50px;
   }
   /* .pimg1, .pimg2, .pimg3{
     background-attachment:scroll;

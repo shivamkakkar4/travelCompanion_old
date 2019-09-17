@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import Axios from 'axios';
-var Push = require('push.js');
+// var Push = require('push.js');
 
 
 
@@ -33,6 +33,7 @@ class Header extends Component{
                 </div>
               `)
             document.getElementById('loginPhoneButton').style.display="none";
+            document.getElementById('logo').style.display="block";
 
 
 
@@ -76,7 +77,7 @@ class Header extends Component{
   
   render(){
     
-    Push.create("Travel Companion",{body:'Welcome to Travel Companion',timeout:4000,icon:require('./images/logo.jpg')});
+    // Push.create("Travel Companion",{body:'Welcome to Travel Companion',timeout:4000,icon:require('./images/logo.jpg')});
 
     return(
 

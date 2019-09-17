@@ -1,7 +1,9 @@
 import React,{Component} from 'react';
+var Push = require('push.js');
 
 class Welcome extends Component{
   render(){
+    Push.create("Travel Companion",{body:'Welcome to Travel Companion',timeout:4000,icon:require('./images/logo.jpg')});
     return(
       <div id="welcome">
           <div class="title">

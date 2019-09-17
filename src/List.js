@@ -56,7 +56,7 @@ class List extends Component
               document.getElementById("itemlist").insertAdjacentHTML("beforeend",`
                 <li class="items">
                   <p><img id="destinationimg" src=${result.data[i].img} /></p>
-                   <p class="destinationIdentity"><b>${result.data[i].title}</b></p>
+                   <b><p class="destinationIdentity">${result.data[i].title}</p></b>
                  </li>
 
               `);
