@@ -900,17 +900,17 @@ let info = {
 
 
 
-mongoClient.connect(mdkey,(err,db)=>{
-    if(err) throw err;
-    var dbo = db.db('travelCompanion');
+// mongoClient.connect(mdkey,(err,db)=>{
+//     if(err) throw err;
+//     var dbo = db.db('travelCompanion');
     
-    dbo.collection('content').insertOne({'list':list},(err,res)=>{
-      if(err) throw err;
+//     dbo.collection('content').insertOne({'list':list},(err,res)=>{
+//       if(err) throw err;
     
-    })
+//     })
     
     
-  })
+//   })
 
   // mongoClient.connect(mdkey,(err,db)=>{
   //   if(err) throw err;
