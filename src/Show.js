@@ -14,7 +14,7 @@ class Show extends Component{
     }
 
     this.fav=()=>{
-      axios.post('/verifyToken',{'token':localStorage.getItem('token')})
+      axios.post('http://localhost:8080/http://localhost:5000/verifyToken',{'token':localStorage.getItem('token')})
       .then((result)=>{
         if(result.data.status=='valid'){
           alert("Added to Favourites");
@@ -55,7 +55,7 @@ class Show extends Component{
         document.getElementById("main").style.display = "none";
         document.getElementById("content").style.display = "block";
 
-        axios.post("/list")
+        axios.post("http://localhost:8080/http://localhost:5000/list")
         .then((result)=>{
           
           document.getElementById('first').innerHTML = "";
@@ -74,7 +74,7 @@ class Show extends Component{
         })
 
 
-        axios.post('/sendData',{'destinationName':destinationName})
+        axios.post('http://localhost:8080/http://localhost:5000/sendData',{'destinationName':destinationName})
         .then((result)=>{
 
           // if(result.data[this.state.j-1]!=undefined){
