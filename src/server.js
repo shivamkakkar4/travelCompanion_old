@@ -1,15 +1,15 @@
 const express  = require('express');
 const app = express();
-app.enable('trust proxy');
-app.use((req,res,next)=>{
-  if(req.protocol=='https'){
-    next();
-  }else{
-    res.redirect(`https://${req.hostname}`);
-  }
-})
-const path=require('path');
-app.use(express.static(path.join(__dirname,"../build")));
+// app.enable('trust proxy');
+// app.use((req,res,next)=>{
+//   if(req.protocol=='https'){
+//     next();
+//   }else{
+//     res.redirect(`https://${req.hostname}`);
+//   }
+// })
+// const path=require('path');
+// app.use(express.static(path.join(__dirname,"../build")));
 const server  = require('http').createServer(app);
 let bodyParser = require('body-parser');
 let mongoClient = require('mongodb').MongoClient;
@@ -17,14 +17,14 @@ let crypto = require('crypto-js');
 const socketIO = require('socket.io');
 var io = socketIO(server);
 const myKey = "forkify";
-app.get("/",(req,res,next)=>{
-  res.sendFile(path.join(__dirname,"../build","index.html"));
-})
+// app.get("/",(req,res,next)=>{
+//   res.sendFile(path.join(__dirname,"../build","index.html"));
+// })
 
 
 //mongodb connectivity
 var mongoUrl = "mongodb://localhost:27017/"
-var mdkey ="mongodb+srv://shivam:shivam027@cluster0-jg0ns.mongodb.net/test?retryWrites=true&w=majority";
+// var mdkey ="mongodb+srv://shivam:shivam027@cluster0-jg0ns.mongodb.net/test?retryWrites=true&w=majority";
 
 
 
@@ -900,7 +900,7 @@ let info = {
 
 
 
-// mongoClient.connect(mdkey,(err,db)=>{
+// mongoClient.connect(mongoUrl,(err,db)=>{
 //     if(err) throw err;
 //     var dbo = db.db('travelCompanion');
     
@@ -912,7 +912,7 @@ let info = {
     
 //   })
 
-  // mongoClient.connect(mdkey,(err,db)=>{
+  // mongoClient.connect(mongoUrl,(err,db)=>{
   //   if(err) throw err;
   //   var dbo = db.db('travelCompanion');
     
@@ -930,7 +930,7 @@ let info = {
 
 app.post('/login',(req,res)=>{
   console.log("yes");
-  mongoClient.connect(mdkey,(err,db)=>{
+  mongoClient.connect(mongoUrl,(err,db)=>{
     if(err) throw err;
     var dbo = db.db('travelCompanion');
     
@@ -965,7 +965,7 @@ app.post('/login',(req,res)=>{
 
 app.post('/signup',(req,res)=>{
 
-  mongoClient.connect(mdkey,(err,db)=>{
+  mongoClient.connect(mongoUrl,(err,db)=>{
     if(err) throw err;
     var dbo = db.db('travelCompanion');
     
@@ -1004,7 +1004,7 @@ app.post('/verifyToken',(req,res)=>{
 
 app.post('/sendData',(req,res)=>{
   
-  mongoClient.connect(mdkey,(err,db)=>{
+  mongoClient.connect(mongoUrl,(err,db)=>{
     if(err) throw err;
     var dbo = db.db('travelCompanion');
     
@@ -1023,7 +1023,7 @@ app.post('/sendData',(req,res)=>{
 
 app.post('/list',(req,res)=>{
 
-  mongoClient.connect(mdkey,(err,db)=>{
+  mongoClient.connect(mongoUrl,(err,db)=>{
     if(err) throw err;
     var dbo = db.db('travelCompanion');
     
@@ -1038,7 +1038,7 @@ app.post('/list',(req,res)=>{
 })
 
 app.post('/deleteAccount',(req,res)=>{
-  mongoClient.connect(mdkey,(err,db)=>{
+  mongoClient.connect(mongoUrl,(err,db)=>{
     if(err) throw err;
     var dbo = db.db('travelCompanion');
     console.log(req.body.delUser);
@@ -1048,9 +1048,9 @@ app.post('/deleteAccount',(req,res)=>{
   })
 })
 
-app.use((req,res)=>{
-  res.send("404,not found");
-})
+// app.use((req,res)=>{
+//   res.send("404,not found");
+// })
 
 
 
