@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.js';
-import Welcome from './Welcome.js'
+import Welcome from './components/Welcome';
 import axios from 'axios';
 import * as serviceWorker from './serviceWorker';
-import Signup from "./Signup";
-import Login from "./Login";
-import Favlist from './Favlist';
-import Menu from './Menu.js';
-import Usermenu from './Usermenu.js';
+import Signup from "./components/Signup";
+import Login from "./components/Login";
+import Favlist from './components/Favlist';
+import Menu from './components/Menu.js';
+import Usermenu from './components/Usermenu';
 
 
 ReactDOM.render(<Welcome />, document.getElementById('welcomeDiv'));
