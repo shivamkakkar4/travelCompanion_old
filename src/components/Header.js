@@ -89,7 +89,6 @@ class Header extends Component{
         
         <button  className="btn btn-success" type="button" id="login">Login</button>
         <img id="logo" src = {require('../images/logo5.jpg')}/>
-        {/* <img id="heart2" src = {require('./images/heart.png')}/> */}
         <img id="heart2" src = {require('../images/heart.png')}/>
       </div>
 
