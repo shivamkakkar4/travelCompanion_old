@@ -14,8 +14,6 @@ const server  = require('http').createServer(app);
 let bodyParser = require('body-parser');
 let mongoClient = require('mongodb').MongoClient;
 let crypto = require('crypto-js');
-const socketIO = require('socket.io');
-var io = socketIO(server);
 const myKey = "forkify";
 // app.get("/",(req,res,next)=>{
 //   res.sendFile(path.join(__dirname,"../build","index.html"));
@@ -23,8 +21,8 @@ const myKey = "forkify";
 
 
 //mongodb connectivity
-var mongoUrl = "mongodb://localhost:27017/"
-// var mdkey ="mongodb+srv://shivam:shivam027@cluster0-jg0ns.mongodb.net/test?retryWrites=true&w=majority";
+// var mongoUrl = "mongodb://localhost:27017/"
+var mongoUrl ="mongodb+srv://shivam:shivam027@cluster0-jg0ns.mongodb.net/test?retryWrites=true&w=majority";
 
 
 
@@ -1051,16 +1049,6 @@ app.post('/deleteAccount',(req,res)=>{
 // app.use((req,res)=>{
 //   res.send("404,not found");
 // })
-
-
-
-
-io.on('connection',(socket)=>{
-console.log("connected")
-  
-});
-//broadcasting
-io.emit('newCustomer',"asdfjladsfhjas");
 
 server.listen(process.env.PORT||5000,(req,res)=>{
   console.log("server is listening to port number 5000")
