@@ -29,7 +29,7 @@ if(localStorage.getItem('token') != undefined){
   var m=0;
   var l = 0;
   document.addEventListener("click",(e)=>{
-    //alert(e.target.textContent);
+
   if(e.target.id == "login"){
     document.getElementById('transparentBack').style.display="block";
     document.getElementById('form').style.height="62vh";
@@ -38,11 +38,9 @@ if(localStorage.getItem('token') != undefined){
   }
   else if(e.target.id == "nSignUp"){
     ReactDOM.unmountComponentAtNode(document.getElementById("form"));
-    // document.getElementById("loginDiv").style.display="none";
     ReactDOM.render(<Signup/>,document.getElementById('form'));
   }
   else if(e.target.id == "aSignUp"){
-    //document.getElementById("signupDiv").style.display="none";
     ReactDOM.unmountComponentAtNode(document.getElementById("form"));
     ReactDOM.render(<Login/>,document.getElementById('form'));
   }
@@ -150,18 +148,7 @@ if(localStorage.getItem('token') != undefined){
   {
       document.getElementById('shopping').style.width = "20rem";
   }
-  // else if(e.target.id=="logo")
-  // {
-  
-  //   if(i==0){
-  //     document.getElementById('shopping').style.width = "20rem";
-  //     i++;
-  //   }
-  //   else if(i==1){
-  //     document.getElementById('shopping').style.width = "0";
-  //     i--;
-  //   }
-  // }
+
   else if(e.target.id=="listOpen"){
     axios.post('http://localhost:8080/http://localhost:5000/verifyToken',{'token':localStorage.getItem('token')})
     .then((result)=>{
@@ -288,11 +275,6 @@ if(localStorage.getItem('token') != undefined){
   else if(e.target.className == "items"){
     document.getElementById("favButtonDiv").style.display="block";
   }
-  // else if(e.target.id == "userButton"){
-  //   localStorage.removeItem('token');
-  //   localStorage.removeItem('userName');
-  //   window.location.reload();
-  // }
 
 
 
@@ -318,105 +300,14 @@ if(localStorage.getItem('token') != undefined){
     document.getElementById('mySidenav').style.width = "0";
     m--;
 
-
-
-
-
-    // document.getElementById('form').style.display = "block";
-    // ReactDOM.render(<Login/>,document.getElementById('form'));
   }
-//   else if(e.target.id=="menu")
-//   {
-    
-//     if(j==0){
-//       document.getElementById('menuBar').style.display = "grid";
-//       j++;
-//     }
-//     else if(j==1){
-//       document.getElementById('menuBar').style.display = "none";
-//       j--;
-//     }
-//   }
-//   else if(e.target.id=="recipeDisplay")
-//   {
-//     document.getElementById("listcontainer").style.display = "block";
-//     document.getElementById("destinationimg").style.display = "block";
-//     document.getElementById("middle").style.gridTemplateColumns = "100% 0%";
-//     document.getElementById('menuBar').style.display = "none";
-//   }
-//   else if(e.target.id == "heart2")
-//   {
-//     if(j==0){
-//       document.getElementById("form").style.display = "block";
-//       ReactDOM.render(<Favlist/>,document.getElementById('form'));
-//       document.getElementById("shopping").style.display = "block";
-//       document.getElementById("shopping").style.height = "65vh";
-//       j++;
-//     }
-//     else if(j==1){
-//       document.getElementById("form").style.display = "none";
-//       j--;
-//     }
-//     // document.getElementById("form").style.display = "block";
-//     // ReactDOM.render(<Favlist/>,document.getElementById('form'));
-//     // document.getElementById("shopping").style.display = "block";
-//     // document.getElementById("shopping").style.height = "100vh";
-//   }
+
   else if(e.target.className=='destinationIdentity' && window.outerWidth<450)
   {
     document.getElementById("listcontainer").style.display = "none";
     document.getElementById("show").style.display = "block";
   }
-//   else if(e.target.id=='midCloseButton')
-//   {
-//     document.getElementById("listcontainer").style.display = "block";
-//     document.getElementById("show").style.display = "none";
-//     //document.getElementById("listcontainer").style.display = "block";
-//   }
-//   else if(e.target.id == "slider")
-//   {
-
-//   }
-// else if(e.target.id=="new"){
-//   alert("asfasdfs")
-// }
-
-
-
-  // else if(e.target.id == "heart2")
-  // {
-  //   //document.getElementById('menuBar').style.display = "none";
-  //   if(k==0){
-  //     document.getElementById("destinationimg").style.display = "none";
-  //     document.getElementById("middle").style.gridTemplateColumns = "0% 0% 100%";
-  //     k++;
-  //   }
-  //   else if(k==1){
-  //     document.getElementById("middle").style.gridTemplateColumns = "25% 75% 0%";
-  //     k--;
-  //   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // else if(e.target.id=="transparentBack"){
-  //   document.getElementById('transparentBack').style.display="none";
-  //   document.getElementById('form').style.display="none";
-
-  // }
   
-
-
 })
 
 // If you want your app to work offline and load faster, you can change
